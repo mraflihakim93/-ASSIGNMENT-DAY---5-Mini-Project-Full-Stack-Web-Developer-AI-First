@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Environment (rahasia)
+.env
+.env.*
+!.env.example
+
+# Log & OS
+*.log
+.DS_Store

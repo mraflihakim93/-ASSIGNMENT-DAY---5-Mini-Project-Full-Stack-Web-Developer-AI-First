@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World To-Do List — Mini Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <p class="site-header__logo">&lt;<span>HelloWorld</span> To-Do List /&gt;</p>
+        <nav class="nav-group">
+          <a class="nav-link" href="login.html">Masuk</a>
+          <a class="nav-link" href="register.html">Daftar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="product-name" style="margin-bottom: 0.5rem">Mini Project Fullstack Web Development</h1>
+      <p class="product-subtitle" style="margin-bottom: 2rem">
+        Pilih halaman detail yang ingin dibuka:
+      </p>
+
+      <div class="product-layout">
+        <a class="status-box" href="product-1.html" style="text-decoration: none; color: inherit">
+          <h2 class="product-name" style="font-size: 1.25rem">Detail Product 1</h2>
+          <p class="product-subtitle" style="margin-top: 0.5rem">
+            Konten <strong>hardcode</strong> (ditulis di product-1.js)
+          </p>
+          <p style="margin-top: 1rem; color: var(--color-primary); font-weight: 600">
+            Buka &rarr;
+          </p>
+        </a>
+
+        <a class="status-box" href="product-2.html" style="text-decoration: none; color: inherit">
+          <h2 class="product-name" style="font-size: 1.25rem">Detail Product 2</h2>
+          <p class="product-subtitle" style="margin-top: 0.5rem">
+            Konten <strong>otomatis dari response API</strong> (Express + MySQL)
+          </p>
+          <p style="margin-top: 1rem; color: var(--color-primary); font-weight: 600">
+            Buka &rarr;
+          </p>
+        </a>
+      </div>
+
+      <p class="product-subtitle" style="margin: 2.5rem 0 0.5rem">
+        Akun &amp; autentikasi:
+      </p>
+      <div class="product-layout">
+        <a class="status-box" href="register.html" style="text-decoration: none; color: inherit">
+          <h2 class="product-name" style="font-size: 1.25rem">Daftar Akun</h2>
+          <p class="product-subtitle" style="margin-top: 0.5rem">
+            Buat akun baru (password di-hash dengan <strong>bcrypt</strong>)
+          </p>
+          <p style="margin-top: 1rem; color: var(--color-primary); font-weight: 600">Daftar &rarr;</p>
+        </a>
+
+        <a class="status-box" href="login.html" style="text-decoration: none; color: inherit">
+          <h2 class="product-name" style="font-size: 1.25rem">Masuk</h2>
+          <p class="product-subtitle" style="margin-top: 0.5rem">
+            Login dan dapatkan token <strong>JWT</strong> untuk dashboard
+          </p>
+          <p style="margin-top: 1rem; color: var(--color-primary); font-weight: 600">Masuk &rarr;</p>
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; 2026 Hello World To-Do List. Mini Project Fullstack Web Development.</p>
+      </div>
+    </footer>
+  </body>
+</html>

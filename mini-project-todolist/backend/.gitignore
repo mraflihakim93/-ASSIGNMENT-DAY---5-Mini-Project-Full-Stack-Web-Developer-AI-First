@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Environment (JANGAN di-commit — berisi password)
+.env
+.env.*
+!.env.example
+
+# Log & OS
+*.log
+.DS_Store

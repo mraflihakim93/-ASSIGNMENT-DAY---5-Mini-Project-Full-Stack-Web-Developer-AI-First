@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Hello World To-Do List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/config.js"></script>
+    <script src="js/session.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <p class="site-header__logo">&lt;<span>HelloWorld</span> To-Do List /&gt;</p>
+        <nav class="nav-group">
+          <a class="nav-link" href="index.html">Beranda</a>
+          <a class="nav-link" href="product-2.html">Task (API)</a>
+          <button id="btn-logout" class="nav-link nav-link--button">Keluar</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <p class="breadcrumb"><span>Dashboard</span></p>
+
+      <div id="dash-loading" class="status-box">
+        <div class="spinner"></div>
+        <p>Memeriksa sesi login&hellip;</p>
+      </div>
+
+      <div id="dash-error" class="status-box status-box--error" hidden>
+        <p id="dash-error-message">Sesi tidak valid.</p>
+        <button onclick="window.location.href='login.html'">Ke Halaman Login</button>
+      </div>
+
+      <section id="dash-content" hidden>
+        <h1 class="product-name">Halo, <span id="dash-name">User</span> 👋</h1>
+        <p class="product-subtitle" style="margin-bottom: 2rem">
+          Anda berhasil login. Ini halaman terproteksi yang hanya bisa diakses dengan token valid.
+        </p>
+
+        <div class="product-layout">
+          <div class="status-box" style="text-align: left">
+            <p class="selector-label">Profil Anda</p>
+            <div class="summary-row"><span class="summary-key">Nama</span><span class="summary-val" id="dash-profile-name">—</span></div>
+            <div class="summary-row"><span class="summary-key">Email</span><span class="summary-val" id="dash-profile-email">—</span></div>
+            <div class="summary-row"><span class="summary-key">Bergabung</span><span class="summary-val" id="dash-profile-since">—</span></div>
+          </div>
+
+          <div class="status-box" style="text-align: left">
+            <p class="selector-label">Status Autentikasi</p>
+            <div class="summary-row"><span class="summary-key">Token</span><span class="summary-val">Aktif (JWT)</span></div>
+            <div class="summary-row"><span class="summary-key">Validasi server</span><span class="summary-val" id="dash-verified">—</span></div>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--color-text-muted)">
+              Data ini diambil dari <code>GET /api/auth/me</code> memakai Bearer token Anda.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; 2026 Hello World To-Do List. Mini Project Fullstack Web Development.</p>
+      </div>
+    </footer>
+  </body>
+</html>

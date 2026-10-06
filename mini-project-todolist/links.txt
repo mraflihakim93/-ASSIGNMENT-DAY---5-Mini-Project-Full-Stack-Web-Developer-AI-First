@@ -1,0 +1,16 @@
+=== MINI PROJECT FULLSTACK WEB DEVELOPMENT ===
+Nama    : Muhammad Rafli Hakim
+Project : Hello World To-Do List
+
+LINK REPOSITORY GITHUB:
+https://github.com/mraflihakim93/-ASSIGNMENT-DAY---5-Mini-Project-Full-Stack-Web-Developer-AI-First
+
+LINK POSTINGAN LINKEDIN:
+(ISI DI SINI setelah upload — contoh: https://www.linkedin.com/posts/mraflihakim93_...)
+
+------------------------------------------------------------------
+CATATAN:
+Link GitHub sudah diisi. Link LinkedIn masih dikosongkan karena
+postingan belum diupload. Setelah upload ke LinkedIn, isi baris
+"LINK POSTINGAN LINKEDIN" di atas, lalu simpan kembali file ini.
+------------------------------------------------------------------

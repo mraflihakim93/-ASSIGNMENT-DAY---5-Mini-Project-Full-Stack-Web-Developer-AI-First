@@ -1,0 +1,27 @@
+{
+  "name": "hello-world-todolist-backend",
+  "version": "1.0.0",
+  "description": "Backend API (Node.js + Express + MySQL) untuk mini project Hello World To-Do List",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "express",
+    "mysql",
+    "todo",
+    "bootcamp"
+  ],
+  "author": "Muhammad Rafli Hakim",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.11.0"
+  }
+}

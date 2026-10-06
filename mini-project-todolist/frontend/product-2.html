@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Task 2 — Dari API | Hello World To-Do List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/config.js"></script>
+    <script src="js/product-2.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <p class="site-header__logo">&lt;<span>HelloWorld</span> To-Do List /&gt;</p>
+        <nav class="nav-group">
+          <a class="nav-link" href="product-1.html">&larr; Task 1 (hardcode)</a>
+          <a class="nav-link" href="login.html">Masuk</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <p class="breadcrumb">
+        <a href="product-1.html">Daftar Task</a> / <span>Detail Task (API)</span>
+      </p>
+
+      <!-- State: loading -->
+      <div id="loading" class="status-box">
+        <div class="spinner"></div>
+        <p>Memuat data dari API&hellip;</p>
+      </div>
+
+      <!-- State: error -->
+      <div id="error" class="status-box status-box--error" hidden>
+        <p id="error-message">Gagal memuat data dari API.</p>
+        <button id="btn-retry">Coba Lagi</button>
+      </div>
+
+      <!-- State: konten (diisi otomatis dari response API) -->
+      <section id="content" class="product-layout" hidden>
+        <div class="product-image-col">
+          <img id="product-image" src="" alt="" />
+        </div>
+
+        <div class="product-info-col">
+          <p class="product-code" id="product-code"></p>
+          <h1 class="product-name" id="product-name"></h1>
+          <p class="product-subtitle" id="product-subtitle"></p>
+          <p class="product-price" id="product-price"></p>
+          <p class="product-description" id="product-description"></p>
+
+          <div class="product-meta" id="product-meta"></div>
+
+          <div class="divider"></div>
+
+          <div class="checklist-selector">
+            <p class="selector-label" id="checklist-label">Langkah Pengerjaan</p>
+            <ul class="checklist" id="checklist" role="group" aria-labelledby="checklist-label"></ul>
+          </div>
+
+          <div class="quantity-control">
+            <p class="selector-label" id="qty-label">Jumlah Sesi</p>
+            <div class="quantity-row" role="group" aria-labelledby="qty-label">
+              <button id="btn-decrease" aria-label="Kurangi jumlah sesi" disabled>&minus;</button>
+              <span id="quantity-display">1</span>
+              <button id="btn-increase" aria-label="Tambah jumlah sesi">+</button>
+            </div>
+          </div>
+
+          <div class="order-summary">
+            <p class="selector-label">Ringkasan</p>
+            <div class="summary-row">
+              <span class="summary-key">Langkah dipilih</span>
+              <span id="summary-size" class="summary-val">Pilih langkah terlebih dahulu</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-key">Jumlah sesi</span>
+              <span id="summary-qty" class="summary-val">1</span>
+            </div>
+            <div class="summary-row summary-row--total">
+              <span class="summary-key">Total durasi</span>
+              <span id="summary-total" class="summary-val">&mdash;</span>
+            </div>
+          </div>
+
+          <button id="btn-confirm" disabled>Konfirmasi Pilihan</button>
+          <div id="confirmation-message" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; 2026 Hello World To-Do List. Mini Project Fullstack Web Development.</p>
+      </div>
+    </footer>
+  </body>
+</html>
