@@ -13,10 +13,15 @@ Backend: **Node.js + Express**. Database: **MySQL**.
 
 ---
 
+## Tampilan Aplikasi
+
+![Screenshot aplikasi Hello World To-Do List](docs/screenshot.png)
+
+---
+
 ## 1. Struktur Folder
 
 ```
-mini-project-todolist/
 ├── frontend/                     # FRONT END (JavaScript)
 │   ├── index.html                # Beranda + navigasi
 │   ├── product-1.html            # Detail Product 1 — hardcode
@@ -27,9 +32,12 @@ mini-project-todolist/
 │   ├── css/
 │   │   └── style.css
 │   └── js/
-│       ├── config.js
-│       ├── product-1.js
-│       └── product-2.js
+│       ├── config.js             # Konfigurasi base URL API
+│       ├── session.js            # Helper simpan/ambil/hapus token JWT
+│       ├── auth.js               # Logika register & login
+│       ├── dashboard.js          # Logika dashboard terproteksi
+│       ├── product-1.js          # Data Product 1 (hardcode)
+│       └── product-2.js          # Ambil Product 2 dari API
 ├── backend/                      # BACK END (JavaScript)
 │   ├── src/
 │   │   ├── server.js             # Entry point Express
@@ -45,7 +53,10 @@ mini-project-todolist/
 ├── database/                     # DATABASE (SQL)
 │   ├── schema.sql                # CREATE DATABASE + CREATE TABLE
 │   └── seed.sql                  # INSERT query (isi data)
+├── docs/                         # Aset dokumentasi
+│   └── screenshot.png            # Tangkapan layar aplikasi
 ├── links.txt                     # link GitHub & LinkedIn
+├── setup-db.sh                   # Skrip bantu setup database
 └── README.md
 ```
 
