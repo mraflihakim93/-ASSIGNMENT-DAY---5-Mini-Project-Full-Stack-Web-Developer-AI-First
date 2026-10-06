@@ -8,6 +8,10 @@ const { pool } = require("../db");
 
 const router = express.Router();
 
+// Daftar kolom task yang dikembalikan API (satu sumber kebenaran).
+const TASK_COLUMNS = `id, code, title, subtitle, description, priority, status,
+                      duration, tags, image_url, created_at, updated_at`;
+
 // ------------------------------------------------------------
 // Helper: ambil semua checklist milik satu task.
 // ------------------------------------------------------------
@@ -26,8 +30,7 @@ async function getChecklists(taskId) {
 router.get("/", async (req, res, next) => {
   try {
     const [rows] = await pool.query(
-      `SELECT id, code, title, subtitle, description, priority, status,
-              duration, tags, image_url, created_at, updated_at
+      `SELECT ${TASK_COLUMNS}
        FROM tasks
        WHERE is_published = 1
        ORDER BY id ASC`
@@ -47,8 +50,7 @@ router.get("/:code", async (req, res, next) => {
   try {
     const { code } = req.params;
     const [rows] = await pool.query(
-      `SELECT id, code, title, subtitle, description, priority, status,
-              duration, tags, image_url, created_at, updated_at
+      `SELECT ${TASK_COLUMNS}
        FROM tasks
        WHERE code = ? AND is_published = 1
        LIMIT 1`,

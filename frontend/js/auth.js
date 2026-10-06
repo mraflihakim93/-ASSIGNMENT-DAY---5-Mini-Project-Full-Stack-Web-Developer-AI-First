@@ -5,17 +5,12 @@
    ============================================================ */
 
 const AUTH_API = (window.APP_CONFIG?.apiBase || "/api") + "/auth";
-const TOKEN_KEY = "todo_token";
-const USER_KEY = "todo_user";
 
 // ------------------------------------------------------------
 // Helper
 // ------------------------------------------------------------
-function saveSession(token, user) {
-  localStorage.setItem(TOKEN_KEY, token);
-  localStorage.setItem(USER_KEY, JSON.stringify(user));
-}
-
+// saveSession() dan konstanta TOKEN_KEY/USER_KEY berada di session.js
+// agar hanya ada satu sumber kebenaran (single source of truth).
 function showMessage(text, type) {
   const el = document.getElementById("auth-message");
   el.textContent = text;

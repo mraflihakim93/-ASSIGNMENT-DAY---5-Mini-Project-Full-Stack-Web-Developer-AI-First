@@ -23,6 +23,11 @@ function clearSession() {
   localStorage.removeItem(USER_KEY);
 }
 
+function saveSession(token, user) {
+  localStorage.setItem(TOKEN_KEY, token);
+  localStorage.setItem(USER_KEY, JSON.stringify(user));
+}
+
 function logout() {
   clearSession();
   window.location.href = "login.html";

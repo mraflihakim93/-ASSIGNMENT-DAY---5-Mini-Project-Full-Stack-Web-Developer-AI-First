@@ -21,7 +21,13 @@ const PORT = Number(process.env.PORT) || 3000;
 // ------------------------------------------------------------
 // Middleware global
 // ------------------------------------------------------------
-app.use(cors());          // izinkan frontend (file:// atau localhost lain) memanggil API
+// Frontend disajikan oleh server Express yang sama (same-origin),
+// jadi CORS cukup dibatasi ke localhost untuk kebutuhan pengembangan.
+app.use(
+  cors({
+    origin: [/^http:\/\/localhost:\d+$/, /^http:\/\/127\.0\.0\.1:\d+$/],
+  })
+);
 app.use(express.json());  // parsing body JSON
 
 // ------------------------------------------------------------

@@ -5,7 +5,14 @@
 
 const jwt = require("jsonwebtoken");
 
-const JWT_SECRET = process.env.JWT_SECRET || "dev-secret-ganti-di-produksi";
+// Wajib diisi lewat .env. Lebih baik gagal start daripada berjalan
+// dengan secret default yang bisa ditebak (berbahaya untuk produksi).
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+  throw new Error(
+    "JWT_SECRET belum diisi. Salin backend/.env.example menjadi backend/.env lalu isi JWT_SECRET."
+  );
+}
 
 /**
  * Middleware: hanya lanjut jika request membawa Bearer token yang valid.
