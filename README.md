@@ -195,4 +195,16 @@ Perbedaan utama:
 
 ---
 
+## 8. Lisensi
+
+Dirilis di bawah lisensi **MIT**. Lihat file [LICENSE](LICENSE) untuk detail.
+
+---
+
+## Penulis
+
+**Muhammad Rafli Hakim**
+
+- GitHub: [@mraflihakim93](https://github.com/mraflihakim93)
+
 © 2026 Muhammad Rafli Hakim — Mini Project Fullstack Web Development.
